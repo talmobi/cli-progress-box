@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/cli-progress-color.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/cli-progress-color)
 [![npm](https://img.shields.io/npm/l/cli-progress-color.svg?maxAge=3600&style=flat-square)](https://github.com/talmobi/cli-progress-color/blob/master/LICENSE)
 
-#  屋 cli-progress-color
+#  cli-progress-color
 easy progress change detection progress bar
 
 ![](https://i.imgur.com/xFMQ3Y3.gif)
@@ -88,5 +88,5 @@ if ( !opts.generateBox ) opts.generateBox = _generateBox
 
 ## Test
 ```
+no tests..
 ```
-
