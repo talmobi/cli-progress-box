@@ -56,89 +56,9 @@ module.exports = function createProgressBox ( opts ) {
 
   api.clc = clc
 
-  // helpers for background colors
-  api.bgColors = {
-    dark: [
-      'bgBlack',
-      'bgRed',
-      'bgGreen',
-      'bgYellow',
-      'bgBlue',
-      'bgMagenta',
-      'bgCyan',
-      'bgWhite'
-    ],
-    bright: [
-      'bgBlackBright',
-      'bgRedBright',
-      'bgGreenBright',
-      'bgYellowBright',
-      'bgBlueBright',
-      'bgMagentaBright',
-      'bgCyanBright',
-      'bgWhiteBright'
-    ],
-    all: [
-      'bgBlack',
-      'bgRed',
-      'bgGreen',
-      'bgYellow',
-      'bgBlue',
-      'bgMagenta',
-      'bgCyan',
-      'bgWhite',
-      'bgBlackBright',
-      'bgRedBright',
-      'bgGreenBright',
-      'bgYellowBright',
-      'bgBlueBright',
-      'bgMagentaBright',
-      'bgCyanBright',
-      'bgWhiteBright'
-    ]
-  }
-
-  // helpers for foreground colors
-  api.fgColors = {
-    dark: [
-      'black',
-      'red',
-      'green',
-      'yellow',
-      'blue',
-      'magenta',
-      'cyan',
-      'white'
-    ],
-    bright: [
-      'blackBright',
-      'redBright',
-      'greenBright',
-      'yellowBright',
-      'blueBright',
-      'magentaBright',
-      'cyanBright',
-      'whiteBright'
-    ],
-    all: [
-      'black',
-      'red',
-      'green',
-      'yellow',
-      'blue',
-      'magenta',
-      'cyan',
-      'white',
-      'blackBright',
-      'redBright',
-      'greenBright',
-      'yellowBright',
-      'blueBright',
-      'magentaBright',
-      'cyanBright',
-      'whiteBright'
-    ]
-  }
+  // helpers
+  api.bgColors = clcBgColors
+  api.fgColors = clcFgColors
 
   return api
 }
@@ -191,3 +111,90 @@ function _generateWhitespace ( count, character )
 
   return buffer
 }
+
+// helpers for background colors
+var clcBgColors = {
+  dark: [
+    'bgBlack',
+    'bgRed',
+    'bgGreen',
+    'bgYellow',
+    'bgBlue',
+    'bgMagenta',
+    'bgCyan',
+    'bgWhite'
+  ],
+  bright: [
+    'bgBlackBright',
+    'bgRedBright',
+    'bgGreenBright',
+    'bgYellowBright',
+    'bgBlueBright',
+    'bgMagentaBright',
+    'bgCyanBright',
+    'bgWhiteBright'
+  ],
+  all: [
+    'bgBlack',
+    'bgRed',
+    'bgGreen',
+    'bgYellow',
+    'bgBlue',
+    'bgMagenta',
+    'bgCyan',
+    'bgWhite',
+    'bgBlackBright',
+    'bgRedBright',
+    'bgGreenBright',
+    'bgYellowBright',
+    'bgBlueBright',
+    'bgMagentaBright',
+    'bgCyanBright',
+    'bgWhiteBright'
+  ]
+}
+
+// helpers for foreground colors
+var clcFgColors = {
+  dark: [
+    'black',
+    'red',
+    'green',
+    'yellow',
+    'blue',
+    'magenta',
+    'cyan',
+    'white'
+  ],
+  bright: [
+    'blackBright',
+    'redBright',
+    'greenBright',
+    'yellowBright',
+    'blueBright',
+    'magentaBright',
+    'cyanBright',
+    'whiteBright'
+  ],
+  all: [
+    'black',
+    'red',
+    'green',
+    'yellow',
+    'blue',
+    'magenta',
+    'cyan',
+    'white',
+    'blackBright',
+    'redBright',
+    'greenBright',
+    'yellowBright',
+    'blueBright',
+    'magentaBright',
+    'cyanBright',
+    'whiteBright'
+  ]
+}
+
+module.exports.bgColors = clcBgColors
+module.exports.fgColors = clcFgColors
