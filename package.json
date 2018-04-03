@@ -1,7 +1,7 @@
 {
   "name": "cli-progress-box",
   "version": "0.0.0",
-  "description": "TODO",
+  "description": "Quick visual change detection indicator",
   "main": "index.js",
   "files": [
     "index.js"

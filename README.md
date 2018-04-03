@@ -1,10 +1,10 @@
 [![npm](https://img.shields.io/npm/v/cli-progress-box.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/cli-progress-box)
 [![npm](https://img.shields.io/npm/l/cli-progress-box.svg?maxAge=3600&style=flat-square)](https://github.com/talmobi/cli-progress-box/blob/master/LICENSE)
 
-#  cli-progress-box
-Quick visual change detection UI
-
 ![](https://i.imgur.com/xFMQ3Y3.gif)
+
+#  cli-progress-box
+Quick visual change detection indicator
 
 ## Easy to use
 
