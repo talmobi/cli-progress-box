@@ -1,0 +1,27 @@
+{
+  "name": "cli-progress-box",
+  "version": "0.0.0",
+  "description": "TODO",
+  "main": "cli-progress-box.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli-progress-box"
+  ],
+  "author": "talmobi <talmo.christian@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talmobi/cli-progress-box"
+  },
+  "bugs": {
+    "url": "https://github.com/talmobi/cli-progress-box/issues",
+    "email": "talmo.christian@gmail.com"
+  },
+  "dependencies": {
+    "cli-color": "~1.2.0"
+  },
+  "devDependencies": {}
+}
