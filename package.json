@@ -1,6 +1,6 @@
 {
   "name": "cli-progress-box",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Quick visual change detection indicator",
   "main": "src/index.js",
   "files": [
