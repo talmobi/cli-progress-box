@@ -73,8 +73,8 @@ if ( !opts.stepSize ) opts.stepSize = opts.stepSize
 if ( !opts.padding ) opts.padding = 0
 if ( !opts.margin ) opts.margin = 4
 
-if ( !opts.clcColor ) opts.clcColor = 'bgMagentaBright'
 if ( !opts.character ) opts.character = ' '
+if ( !opts.colors ) opts.colors = clcBgColors.bright.slice() // color changes based on opts.step
 
 if ( !opts.getHeader ) opts.getHeader = function ( opts ) { return '' }
 if ( !opts.getFooter ) opts.getFooter = function ( opts ) { return '' }

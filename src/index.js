@@ -17,7 +17,7 @@ var clc = require( 'cli-color' )
 module.exports = function createProgressBox ( opts ) {
   opts = opts || {}
 
-  if ( !opts.step ) opts.step = 0
+  if ( !opts.step ) opts.step = 0 // will mutate
   if ( !opts.maxStep ) opts.maxStep = 4
 
   if ( !opts.offset ) opts.offset = 0
@@ -27,11 +27,13 @@ module.exports = function createProgressBox ( opts ) {
   if ( !opts.padding ) opts.padding = 0
   if ( !opts.margin ) opts.margin = 4
 
-  if ( !opts.clcColor ) opts.clcColor = 'bgMagentaBright'
   if ( !opts.character ) opts.character = ' '
+  if ( !opts.colors ) opts.colors = clcBgColors.bright.slice()
 
   if ( !opts.getHeader ) opts.getHeader = function ( opts ) { return '' }
   if ( !opts.getFooter ) opts.getFooter = function ( opts ) { return '' }
+
+  if ( !opts.ontick ) opts.ontick = function ( opts ) { return opts }
 
   if ( !opts.transform ) opts.transform = _transform
   if ( !opts.render ) opts.render = _render
@@ -40,6 +42,8 @@ module.exports = function createProgressBox ( opts ) {
   opts.content = ''
 
   var api = function progressBox ( step ) {
+    opts = opts.ontick && opts.ontick( opts ) || opts
+
     opts.content = opts.transform( opts, step )
     return opts.content
   }
