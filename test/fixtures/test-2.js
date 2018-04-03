@@ -24,4 +24,4 @@ var str = JSON.stringify( buffer )
 var json = JSON.parse( str )
 str = JSON.stringify( json )
 
-fs.writeFileSync( './test-2.json', str, 'utf8' )
+fs.writeFileSync( __dirname + '/test-2.json', str, 'utf8' )

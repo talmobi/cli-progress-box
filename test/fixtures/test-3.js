@@ -15,4 +15,4 @@ for ( let i = 0; i < 10; i++ ) {
 
 var str = JSON.stringify( buffer )
 
-fs.writeFileSync( __dirname + '/test-1.json', str, 'utf8' )
+fs.writeFileSync( __dirname + '/test-3.json', str, 'utf8' )

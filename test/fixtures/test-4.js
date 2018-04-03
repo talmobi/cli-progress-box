@@ -7,6 +7,8 @@ var box = progressBox( opts )
 
 // opts.character = '愛'
 
+opts.colors = [ 'bgRedBright', 'bgBlueBright' ]
+
 var buffer = []
 
 for ( let i = 0; i < 10; i++ ) {
@@ -15,4 +17,4 @@ for ( let i = 0; i < 10; i++ ) {
 
 var str = JSON.stringify( buffer )
 
-fs.writeFileSync( __dirname + '/test-1.json', str, 'utf8' )
+fs.writeFileSync( __dirname + '/test-4.json', str, 'utf8' )
