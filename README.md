@@ -88,5 +88,5 @@ if ( !opts.generateBox ) opts.generateBox = _generateBox
 
 ## Test
 ```
-no tests..
+npm test
 ```
