@@ -95,8 +95,27 @@ function _generateBox ( opts )
 
 function _render ( opts )
 {
+  var colors = opts.colors
+
+  if ( typeof opts.colors === 'function' ) {
+    colors = opts.colors( opts )
+  }
+
+  if ( typeof colors === 'string' ) {
+    colors = colors.split( /\s+/ )
+  }
+
+  if ( typeof colors === 'object' ) {
+    colors = colors
+  }
+
+  var color = colors[ opts.step % colors.length ]
+
+  if ( opts.color ) color = opts.color
+  if ( opts.clcColor ) color = opts.clcColor
+
   var box = opts.generateBox( opts )
-  return clc[ opts.clcColor ]( box )
+  return clc[ color ]( box )
 }
 
 function _generateWhitespace ( count, character )
